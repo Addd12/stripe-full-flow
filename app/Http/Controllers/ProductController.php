@@ -17,7 +17,7 @@ class ProductController extends Controller
 
     public function checkout()
     {
-        \Stripe\Stripe::setApiKey('STRIPE_SECRET_KEY');
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
 
         $products = Product::all();
         $lineItems = [];
